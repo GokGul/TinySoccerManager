@@ -35,10 +35,11 @@ namespace TinySoccerManager.Controllers
                 {
                     Home = matchups.Dequeue(),
                     Away = matchups.Dequeue(),
-                    Date = DateTime.Now,
-                    Result = simGame()
+                    Date = DateTime.Now
+                    //Result = simGame()
                 };
                 games.Add(game);
+                game.simGame();
 
                 context.Games.Add(game);
                 context.SaveChanges();
@@ -64,11 +65,11 @@ namespace TinySoccerManager.Controllers
             return matchUps;
         }
 
-        private string simGame()
-        {
-            string result = "3-2";
+        //private string simGame()
+        //{
+        //    string result = "3-2";
 
-            return result;
-        }
+        //    return result;
+        //}
     }
 }
