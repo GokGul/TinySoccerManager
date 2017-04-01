@@ -128,11 +128,25 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\SoccerContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703311923474_CreateAllTables.cs" />
+    <Compile Include="Migrations\201703311923474_CreateAllTables.Designer.cs">
+      <DependentUpon>201703311923474_CreateAllTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703311934220_PopulateCountryPositionTournamentPouleTeam.cs" />
+    <Compile Include="Migrations\201703311934220_PopulateCountryPositionTournamentPouleTeam.Designer.cs">
+      <DependentUpon>201703311934220_PopulateCountryPositionTournamentPouleTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703311947287_PopulatePlayers.cs" />
+    <Compile Include="Migrations\201703311947287_PopulatePlayers.Designer.cs">
+      <DependentUpon>201703311947287_PopulatePlayers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\GameResult.cs" />
@@ -178,6 +192,8 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Game\Index.cshtml" />
+    <Content Include="Views\Game\Play.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -189,6 +205,17 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201703311923474_CreateAllTables.resx">
+      <DependentUpon>201703311923474_CreateAllTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703311934220_PopulateCountryPositionTournamentPouleTeam.resx">
+      <DependentUpon>201703311934220_PopulateCountryPositionTournamentPouleTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703311947287_PopulatePlayers.resx">
+      <DependentUpon>201703311947287_PopulatePlayers.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

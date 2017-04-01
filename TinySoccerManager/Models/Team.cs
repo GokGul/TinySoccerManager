@@ -8,5 +8,6 @@ namespace TinySoccerManager.Models
         public virtual Country Country { get; set; }
         public virtual ICollection<Poule> Poule { get; set; }
         public virtual ICollection<Player> Players { get; set; }
+        public virtual ICollection<Game> Games { get; set; }
     }
 }

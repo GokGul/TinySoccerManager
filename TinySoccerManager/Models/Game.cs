@@ -5,6 +5,7 @@ namespace TinySoccerManager.Models
 {
     public class Game
     {
+        public int Id { get; set; }
         public virtual Poule Poule { get; set; }
         public virtual Team Home { get; set; }
         public virtual Team Away { get; set; }
