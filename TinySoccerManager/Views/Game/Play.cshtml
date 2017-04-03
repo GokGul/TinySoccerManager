@@ -7,12 +7,12 @@
 <h2>Play</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Replay!", "Play", "Game", null, new { @class = "btn btn-info" })
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Home)
+            <span>Wedstrijd</span>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Date)
@@ -35,11 +35,22 @@
             @Html.DisplayFor(modelItem => item.Result)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Details", "Details", new { id=item.Id })
         </td>
     </tr>
 }
+    <tr>
+        <td>
+            
+        </td>
+    </tr>
 
 </table>
+Poulestand poule @Model.FirstOrDefault().Poule.Name<br />
+@{ 
+    foreach (var i in Model.FirstOrDefault().Poule.PouleResults)
+    {
+        @i.Key.Country.ShortName<span> </span>
+        @i.Value<br />
+    }
+}

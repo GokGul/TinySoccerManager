@@ -146,6 +146,10 @@
     <Compile Include="Migrations\201703311947287_PopulatePlayers.Designer.cs">
       <DependentUpon>201703311947287_PopulatePlayers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704020916519_OffenceStoppedAdded.cs" />
+    <Compile Include="Migrations\201704020916519_OffenceStoppedAdded.Designer.cs">
+      <DependentUpon>201704020916519_OffenceStoppedAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Game.cs" />
@@ -194,6 +198,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Game\Index.cshtml" />
     <Content Include="Views\Game\Play.cshtml" />
+    <Content Include="Views\Game\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -215,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703311947287_PopulatePlayers.resx">
       <DependentUpon>201703311947287_PopulatePlayers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704020916519_OffenceStoppedAdded.resx">
+      <DependentUpon>201704020916519_OffenceStoppedAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

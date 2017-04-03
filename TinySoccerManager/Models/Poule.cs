@@ -10,5 +10,7 @@ namespace TinySoccerManager.Models
 
         public virtual ICollection<Team> TeamsInPoule { get; set; }
         public virtual ICollection<Game> GamesInPoule { get; set; }
+
+        public Dictionary<Team, int> PouleResults { get; set; }
     }
 }
